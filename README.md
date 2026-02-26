@@ -1,6 +1,3 @@
-# frist-cleaning-dataset
-My Frist cleaning dataset
-
 [![Telegram](https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/uzpenta)
 
 Loyiha maqsadi: "Ushbu loyihada Pandas yordamida ma'lumotlarni tozalash jarayonini mashq qildim."
