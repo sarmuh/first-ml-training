@@ -1,10 +1,10 @@
-# 🏠 Toshkent Uylar Narxi Bashorati
+# 🏠 Tashkent House Price Prediction
 
-> Toshkent shahridagi uylar narxini bashorat qilish uchun ma'lumotlarni tahlil qilish va ML modeli yaratish loyihasi
+> A project for analyzing data and building an ML model to predict house prices in Tashkent
 
 ---
 
-## 📊 Loyiha Holati
+## 📊 Project Status
 
 ![Status](https://img.shields.io/badge/Status-🚀%20Learning-brightgreen?style=for-the-badge)
 ![Progress](https://img.shields.io/badge/Progress-10%25%20EDA%20Completed-blue?style=for-the-badge)
@@ -13,53 +13,53 @@
 
 ---
 
-## 🎯 Loyiha Maqsadi
+## 🎯 Project Goal
 
-**Maqsad:** Toshkent shahridagi uylar narxini bashorat qilish uchun sifatli machine learning modeli yaratish
+**Goal:** To build a high-quality machine learning model for predicting house prices in Tashkent
 
-**Ma'lumotlar Manbai:** Toshkent uy bozorining real ma'lumotlari (Excel format)
-
----
-
-## ✅ Bajarilgan Ishlar
-
-### 📥 1-BOSQICH: Ma'lumotlarni Yuklash va Tanishish
-- ✨ Excel fayldan ma'lumotlarni yuklash (`Toshkent_houses.xlsx`)
-- 📋 Dataset tuzilmasini o'rganish (shape, columns)
-- 📝 Ustunlar ta'rifini yaratish
-
-### 🔍 2-BOSQICH: Tanloviy Tahlil (EDA)
-- 📊 **Asosiy Statistika:** describe() - o'rtacha, min, max qiymatlar
-- 🎯 **Null Qiymatlarni Tekshirish:** isna().sum() bilan bo'sh joylari aniqlash
-- 🔗 **Korrelyatsion Tahlil:** feature va price o'rtasidagi bog'lanishni o'rganish
-- 🗑️ **Ma'lumotlarni Tozalash:** address ustunini olib tashlash (1 satr = 1 manzil)
-
-### 📈 3-BOSQICH: Ma'lumotlarni Vizualizatsiya
-- 📊 **Histogramlar:** Barcha numeric feature lar uchun taqsimot
-- 🎨 **Scatter Plot:** Joylashgan joyning xaritasida narx taqsimoti
-- 📶 **Bar Plot:** Qavatlar bo'yicha o'rtacha narx
-- 🔥 **Heatmap:** Korrelyatsion matritsani vizualizatsiya
-- 📐 **Pairplot:** Feature va price o'rtasidagi bog'lanish
+**Data Source:** Real data from the Tashkent housing market (Excel format)
 
 ---
 
-## 📁 Loyiha Tuzilmasi
+## ✅ Completed Work
+
+### 📥 STAGE 1: Loading and Understanding the Data
+- ✨ Loaded the data from an Excel file (`tashkent_houses.xlsx`)
+- 📋 Explored the dataset structure (shape, columns)
+- 📝 Created column descriptions
+
+### 🔍 STAGE 2: Exploratory Data Analysis (EDA)
+- 📊 **Basic Statistics:** `describe()` - mean, min, and max values
+- 🎯 **Null Value Check:** identified missing values using `isna().sum()`
+- 🔗 **Correlation Analysis:** studied the relationship between features and price
+- 🗑️ **Data Cleaning:** removed the address column (1 row = 1 address)
+
+### 📈 STAGE 3: Data Visualization
+- 📊 **Histograms:** distributions for all numeric features
+- 🎨 **Scatter Plot:** price distribution on the location map
+- 📶 **Bar Plot:** average price by floor
+- 🔥 **Heatmap:** visualization of the correlation matrix
+- 📐 **Pairplot:** relationships between features and price
+
+---
+
+## 📁 Project Structure
 
 ```
 first-ml-training/
-├── 📄 README.md                          # Loyiha haqida ma'lumot
+├── 📄 README.md                          # Information about the project
 ├── 📊 data/
 │   ├── raw/
-│   │   └── Toshkent_houses.xlsx          # Xom ma'lumotlar
-│   └── processed/                        # Qayta ishlangan ma'lumotlar
-├── 🤖 models/                            # O'qitilgan ML modellar
+│   │   └── Toshkent_houses.xlsx          # Raw data
+│   └── processed/                        # Processed data
+├── 🤖 models/                            # Trained ML models
 └── 📓 notebooks/
     └── 01_data_info.ipynb                # EDA Jupyter notebook
 ```
 
 ---
 
-## 🛠 Foydalanilgan Texnologiyalar
+## 🛠 Technologies Used
 
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 ![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
@@ -70,42 +70,42 @@ first-ml-training/
 
 ---
 
-## 📊 Dataset Haqida Ma'lumot
+## 📊 Dataset Information
 
-| Parametr | Qiymat |
+| Parameter | Value |
 |----------|--------|
-| **Ustunlar soni** | 7 |
-| **Ma'lumot turlari** | String, Integer, Float |
-| **Null qiymatlar** | Yo'q |
-| **Manzil** | Toshkent shahri |
-| **Uy turlari** | Barcha turlari (tilakli, ko'p qavatli) |
+| **Number of columns** | 7 |
+| **Data types** | String, Integer, Float |
+| **Null values** | None |
+| **Location** | Tashkent city |
+| **House types** | All types (private houses, multi-story apartments) |
 
 ---
 
-## 🔑 Asosiy O'zgaruvchilar
+## 🔑 Main Variables
 
-| O'zgaruvchi | Ta'rifi |
+| Variable | Description |
 |-------------|---------|
-| **location** | Sotilayotgan uy manzili |
-| **district** | Uy joylashgan tuman |
-| **rooms** | Xonalar soni |
-| **size** | Uy maydoni (kv.m) |
-| **level** | Uy joylashgan qavat |
-| **max_levels** | Ja'mi qavatlar soni |
-| **price** | Uy narxi (maqsad o'zgaruvchisi) |
+| **location** | Address of the house being sold |
+| **district** | District where the house is located |
+| **rooms** | Number of rooms |
+| **size** | House area (sq. m) |
+| **level** | Floor where the house is located |
+| **max_levels** | Total number of floors |
+| **price** | House price (target variable) |
 
 ---
 
-## 🚀 Keyingi Bosqichlar
+## 🚀 Next Steps
 
-- [ ] Model tanlovni boshlash (Linear Regression, Random Forest)
-- [ ] Feature Engineering qilish
-- [ ] Model o'qitish va tekshirish
-- [ ] Xatolarni tahlil qilish (MAE, RMSE, R²)
-- [ ] Eng yaxshi modelni joylashtirish
+- [ ] Start model selection (Linear Regression, Random Forest)
+- [ ] Perform feature engineering
+- [ ] Train and evaluate the model
+- [ ] Analyze errors (MAE, RMSE, R²)
+- [ ] Deploy the best model
 
 ---
 
-## 📝 Qayd
+## 📝 Note
 
-*Loyiha tayyorlash jarayonida: Ma'lumotlarni tahlil qilish → Modelni o'qitish → Bashorat qilish*
+*Project development process: Data analysis → Model training → Prediction*
