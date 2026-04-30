@@ -3,7 +3,7 @@ Loyiha maqsadi: "null"
 Bajarilgan ishlar: "null"
 
 ![Status](https://img.shields.io/badge/Status-Learning-green)
-![Topic](https://img.shields.io/badge/Success-0%25%20Cleaning-orange)
+![Topic](https://img.shields.io/badge/Success-5%25%20Cleaning-orange)
 
 
 ### 🛠 Foydalanilgan texnologiyalar:
