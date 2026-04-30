@@ -1,9 +1,15 @@
-Loyiha maqsadi: "null"
+Loyiha maqsadi: "Tashkent shahridagi uylar narxini bashorat qilish uchun ma'lumotlarni tahlil qilish va model yaratish"
 
-Bajarilgan ishlar: "null"
+Bajarilgan ishlar: "Ma'lumotlarni yuklash (Excel fayldan), ma'lumotlar haqida umumiy ma'lumot olish (shakl, info, null qiymatlar), statistik tahlil (describe, corr), ma'lumotlarni tozalash (address ustunini olib tashlash), Exploratory Data Analysis (histogramlar, scatter plot, bar plot, heatmap, pairplot)"
 
 ![Status](https://img.shields.io/badge/Status-Learning-green)
-![Topic](https://img.shields.io/badge/Success-5%25%20Cleaning-orange)
+![Topic](https://img.shields.io/badge/Success-10%20EDA-orange)
+
+### 📁 Loyiha tuzilmasi:
+- `data/raw/` - xom ma'lumotlar (tashkent_houses.xlsx)
+- `data/processed/` - qayta ishlangan ma'lumotlar
+- `models/` - o'qitilgan modellar
+- `notebooks/` - Jupyter notebooks (01_data_info.ipynb - ma'lumotlarni tahlil qilish)
 
 
 ### 🛠 Foydalanilgan texnologiyalar:
