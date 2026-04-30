@@ -1,6 +1,6 @@
-# 🏠 Tashkent Uylar Narxi Bashorati
+# 🏠 Toshkent Uylar Narxi Bashorati
 
-> Tashkent shahridagi uylar narxini bashorat qilish uchun ma'lumotlarni tahlil qilish va ML modeli yaratish loyihasi
+> Toshkent shahridagi uylar narxini bashorat qilish uchun ma'lumotlarni tahlil qilish va ML modeli yaratish loyihasi
 
 ---
 
@@ -15,16 +15,16 @@
 
 ## 🎯 Loyiha Maqsadi
 
-**Maqsad:** Tashkent shahridagi uylar narxini bashorat qilish uchun sifatli machine learning modeli yaratish
+**Maqsad:** Toshkent shahridagi uylar narxini bashorat qilish uchun sifatli machine learning modeli yaratish
 
-**Ma'lumotlar Manbai:** Tashkent uy bozorining real ma'lumotlari (Excel format)
+**Ma'lumotlar Manbai:** Toshkent uy bozorining real ma'lumotlari (Excel format)
 
 ---
 
 ## ✅ Bajarilgan Ishlar
 
 ### 📥 1-BOSQICH: Ma'lumotlarni Yuklash va Tanishish
-- ✨ Excel fayldan ma'lumotlarni yuklash (`tashkent_houses.xlsx`)
+- ✨ Excel fayldan ma'lumotlarni yuklash (`Toshkent_houses.xlsx`)
 - 📋 Dataset tuzilmasini o'rganish (shape, columns)
 - 📝 Ustunlar ta'rifini yaratish
 
@@ -50,7 +50,7 @@ first-ml-training/
 ├── 📄 README.md                          # Loyiha haqida ma'lumot
 ├── 📊 data/
 │   ├── raw/
-│   │   └── tashkent_houses.xlsx          # Xom ma'lumotlar
+│   │   └── Toshkent_houses.xlsx          # Xom ma'lumotlar
 │   └── processed/                        # Qayta ishlangan ma'lumotlar
 ├── 🤖 models/                            # O'qitilgan ML modellar
 └── 📓 notebooks/
@@ -77,7 +77,7 @@ first-ml-training/
 | **Ustunlar soni** | 7 |
 | **Ma'lumot turlari** | String, Integer, Float |
 | **Null qiymatlar** | Yo'q |
-| **Manzil** | Tashkent shahri |
+| **Manzil** | Toshkent shahri |
 | **Uy turlari** | Barcha turlari (tilakli, ko'p qavatli) |
 
 ---
@@ -109,11 +109,3 @@ first-ml-training/
 ## 📝 Qayd
 
 *Loyiha tayyorlash jarayonida: Ma'lumotlarni tahlil qilish → Modelni o'qitish → Bashorat qilish*
-
-
-### 🛠 Foydalanilgan texnologiyalar:
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
