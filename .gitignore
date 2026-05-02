@@ -23,7 +23,6 @@ ENV/
 !.env.example
 
 # Generated data
-data/processed/*
 !data/processed/.gitkeep
 data/interim/*
 !data/interim/.gitkeep
