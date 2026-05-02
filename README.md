@@ -7,7 +7,7 @@
 ## 📊 Project Status
 
 ![Status](https://img.shields.io/badge/Status-🚀%20Learning-brightgreen?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-10%25%20EDA%20Completed-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-30%25%20Preprocessing%20Completed-blue?style=for-the-badge)
 ![Dataset](https://img.shields.io/badge/Dataset-✅%20Loaded-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)
 
@@ -41,6 +41,15 @@
 - 🔥 **Heatmap:** visualization of the correlation matrix
 - 📐 **Pairplot:** relationships between features and price
 
+### 🔧 STAGE 4: Data Preprocessing
+- 🗂️ **Data Filtering:** limited price to ≤400,000 and size to ≤350 sq.m for better prediction accuracy
+- ✂️ **Train/Test Split:** split data into training and test sets (80/20) with stratification by district
+- 🔄 **Imputation:** handled missing values using mean imputation
+- 🔢 **Encoding:** applied Ordinal and OneHot encoding for categorical features (district)
+- ⚙️ **Feature Engineering:** added custom features (room_size = size/rooms, distance_to_center using Haversine formula)
+- 📏 **Scaling:** applied MinMaxScaler and StandardScaler for feature normalization
+- 💾 **Data Saving:** saved processed data to CSV format
+
 ---
 
 ## 📁 Project Structure
@@ -51,10 +60,12 @@ first-ml-training/
 ├── 📊 data/
 │   ├── raw/
 │   │   └── Toshkent_houses.xlsx          # Raw data
-│   └── processed/                        # Processed data
+│   └── processed/
+│       └── tashkent_houses.csv           # Processed and cleaned data
 ├── 🤖 models/                            # Trained ML models
 └── 📓 notebooks/
-    └── 01_data_info.ipynb                # EDA Jupyter notebook
+    ├── 01_data_info.ipynb                # EDA Jupyter notebook
+    └── 02_data_Preprocessing.ipynb       # Data preprocessing Jupyter notebook
 ```
 
 ---
@@ -79,6 +90,7 @@ first-ml-training/
 | **Null values** | None |
 | **Location** | Tashkent city |
 | **House types** | All types (private houses, multi-story apartments) |
+| **Filtered** | Price ≤400,000, Size ≤350 sq.m |
 
 ---
 
@@ -86,20 +98,20 @@ first-ml-training/
 
 | Variable | Description |
 |-------------|---------|
-| **location** | Address of the house being sold |
 | **district** | District where the house is located |
 | **rooms** | Number of rooms |
 | **size** | House area (sq. m) |
 | **level** | Floor where the house is located |
 | **max_levels** | Total number of floors |
 | **price** | House price (target variable) |
+| **lat** | Latitude coordinate |
+| **lng** | Longitude coordinate |
 
 ---
 
 ## 🚀 Next Steps
 
 - [ ] Start model selection (Linear Regression, Random Forest)
-- [ ] Perform feature engineering
 - [ ] Train and evaluate the model
 - [ ] Analyze errors (MAE, RMSE, R²)
 - [ ] Deploy the best model
@@ -108,4 +120,4 @@ first-ml-training/
 
 ## 📝 Note
 
-*Project development process: Data analysis → Model training → Prediction*
+*Project development process: Data analysis → Feature engineering → Data preprocessing → Model training → Prediction*
