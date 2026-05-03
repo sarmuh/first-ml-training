@@ -7,7 +7,7 @@
 ## 📊 Project Status
 
 ![Status](https://img.shields.io/badge/Status-🚀%20Learning-brightgreen?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-45%25%20Pipeline%20Prepared-blue?style=for-the-badge)
+![Progress](https://img.shields.io/badge/Progress-70%25%20Baseline%20Evaluated-blue?style=for-the-badge)
 ![Dataset](https://img.shields.io/badge/Dataset-✅%20Loaded-success?style=for-the-badge)
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)
 
@@ -50,10 +50,15 @@
 - 📏 **Scaling:** applied MinMaxScaler and StandardScaler for feature normalization
 - 💾 **Data Saving:** saved processed data to CSV format
 
-### 🧪 STAGE 5: Training Pipeline
+### 🧪 STAGE 5: Training Pipeline and Baseline Models
 - 🔁 **Pipeline:** created a numeric pipeline with custom feature engineering and StandardScaler
 - 🏷️ **ColumnTransformer:** combined numeric preprocessing with OneHot encoding for district
 - ✅ **Pipeline Check:** verified that `full_pipeline.fit_transform(X_train)` works successfully
+- 🤖 **Models:** trained Linear Regression, Decision Tree, and Random Forest models
+- 📏 **Evaluation:** compared baseline models using RMSE
+- 🔍 **Cross-Validation:** used `cross_val_score` to validate baseline models
+- 🧾 **Sample Prediction:** compared predicted prices with actual prices on test samples
+- 🏆 **Best Baseline:** Random Forest Regressor (`Test RMSE: 16200.90`)
 
 ---
 
@@ -67,7 +72,7 @@ first-ml-training/
 │   │   └── tashkent_houses.xlsx          # Raw data
 │   └── processed/
 │       └── tashkent_houses.csv           # Processed and cleaned data
-├── 🤖 models/                            # Trained ML models
+├── 🤖 models/                            # Model artifacts (not saved yet)
 └── 📓 notebooks/
     ├── 01_data_info.ipynb                # EDA Jupyter notebook
     ├── 02_data_Preprocessing.ipynb       # Data preprocessing Jupyter notebook
@@ -91,7 +96,8 @@ first-ml-training/
 
 | Parameter | Value |
 |----------|--------|
-| **Number of columns** | 8 |
+| **Raw dataset** | 7421 rows, 9 columns |
+| **Processed dataset** | 7405 rows, 8 columns |
 | **Data types** | String, Integer, Float |
 | **Null values** | None |
 | **Location** | Tashkent city |
@@ -117,9 +123,12 @@ first-ml-training/
 
 ## 🚀 Next Steps
 
-- [ ] Start model selection (Linear Regression, Random Forest)
-- [ ] Train and evaluate the model
-- [ ] Analyze errors (MAE, RMSE, R²)
+- [x] Train baseline models (Linear Regression, Decision Tree, Random Forest)
+- [x] Evaluate baseline models with RMSE
+- [x] Add cross-validation for baseline models
+- [ ] Analyze errors (MAE, R², residuals)
+- [ ] Tune Random Forest hyperparameters
+- [ ] Save the best model to the `models/` folder
 - [ ] Deploy the best model
 
 ---
