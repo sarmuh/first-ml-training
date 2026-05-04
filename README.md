@@ -128,8 +128,15 @@ first-ml-training/
 - [x] Add cross-validation for baseline models
 - [ ] Analyze errors (MAE, R², residuals)
 - [ ] Tune Random Forest hyperparameters
-- [ ] Save the best model to the `models/` folder
+- [x] Save the trained models to the `models/` folder
 - [ ] Deploy the best model
+
+---
+
+## 📝 Note
+
+*Project development process: Data analysis → Feature engineering → Data preprocessing → Model training → Prediction*
+model
 
 ---
 
