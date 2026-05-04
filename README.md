@@ -1,145 +1,136 @@
-# 🏠 Tashkent House Price Prediction
+<div align="center">
 
-> A project for analyzing data and building an ML model to predict house prices in Tashkent
+# 🏡 Tashkent Real Estate: Price Prediction ML Pipeline
 
----
+*An End-to-End Machine Learning Project for Predicting Housing Prices in Tashkent City.*
 
-## 📊 Project Status
+[![Status](https://img.shields.io/badge/Status-🚀_Active-brightgreen?style=for-the-badge)](https://github.com/)
+[![Progress](https://img.shields.io/badge/Progress-85%25_Models_Saved-blue?style=for-the-badge)](https://github.com/)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)](https://python.org)
+[![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)](https://scikit-learn.org)
 
-![Status](https://img.shields.io/badge/Status-🚀%20Learning-brightgreen?style=for-the-badge)
-![Progress](https://img.shields.io/badge/Progress-70%25%20Baseline%20Evaluated-blue?style=for-the-badge)
-![Dataset](https://img.shields.io/badge/Dataset-✅%20Loaded-success?style=for-the-badge)
-![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python&logoColor=white)
-
----
-
-## 🎯 Project Goal
-
-**Goal:** To build a high-quality machine learning model for predicting house prices in Tashkent
-
-**Data Source:** Real data from the Tashkent housing market (Excel format)
+</div>
 
 ---
 
-## ✅ Completed Work
-
-### 📥 STAGE 1: Loading and Understanding the Data
-- ✨ Loaded the data from an Excel file (`tashkent_houses.xlsx`)
-- 📋 Explored the dataset structure (shape, columns)
-- 📝 Created column descriptions
-
-### 🔍 STAGE 2: Exploratory Data Analysis (EDA)
-- 📊 **Basic Statistics:** `describe()` - mean, min, and max values
-- 🎯 **Null Value Check:** identified missing values using `isna().sum()`
-- 🔗 **Correlation Analysis:** studied the relationship between features and price
-- 🗑️ **Data Cleaning:** removed the address column (1 row = 1 address)
-
-### 📈 STAGE 3: Data Visualization
-- 📊 **Histograms:** distributions for all numeric features
-- 🎨 **Scatter Plot:** price distribution on the location map
-- 📶 **Bar Plot:** average price by floor
-- 🔥 **Heatmap:** visualization of the correlation matrix
-- 📐 **Pairplot:** relationships between features and price
-
-### 🔧 STAGE 4: Data Preprocessing
-- 🗂️ **Data Filtering:** limited price to ≤400,000 and size to ≤350 sq.m for better prediction accuracy
-- ✂️ **Train/Test Split:** split data into training and test sets (80/20) with stratification by district
-- 🔄 **Imputation:** handled missing values using mean imputation
-- 🔢 **Encoding:** applied Ordinal and OneHot encoding for categorical features (district)
-- ⚙️ **Feature Engineering:** added custom features (room_size = size/rooms, distance_to_center using Haversine formula)
-- 📏 **Scaling:** applied MinMaxScaler and StandardScaler for feature normalization
-- 💾 **Data Saving:** saved processed data to CSV format
-
-### 🧪 STAGE 5: Training Pipeline and Baseline Models
-- 🔁 **Pipeline:** created a numeric pipeline with custom feature engineering and StandardScaler
-- 🏷️ **ColumnTransformer:** combined numeric preprocessing with OneHot encoding for district
-- ✅ **Pipeline Check:** verified that `full_pipeline.fit_transform(X_train)` works successfully
-- 🤖 **Models:** trained Linear Regression, Decision Tree, and Random Forest models
-- 📏 **Evaluation:** compared baseline models using RMSE
-- 🔍 **Cross-Validation:** used `cross_val_score` to validate baseline models
-- 🧾 **Sample Prediction:** compared predicted prices with actual prices on test samples
-- 🏆 **Best Baseline:** Random Forest Regressor (`Test RMSE: 16200.90`)
+## 📖 Table of Contents
+1. [🎯 Project Overview](#-project-overview)
+2. [📊 Dataset Information](#-dataset-information)
+3. [🧠 Methodology & Pipeline](#-methodology--pipeline)
+   - [Exploratory Data Analysis (EDA)](#1️⃣-exploratory-data-analysis-eda)
+   - [Data Preprocessing](#2️⃣-data-preprocessing--feature-engineering)
+   - [Modeling & Evaluation](#3️⃣-modeling--evaluation)
+4. [📁 Project Structure](#-project-structure)
+5. [🏆 Results](#-results)
+6. [🚀 Next Steps](#-next-steps)
 
 ---
 
-## 📁 Project Structure
+## 🎯 Project Overview
 
-```
-first-ml-training/
-├── 📄 README.md                          # Information about the project
-├── 📊 data/
-│   ├── raw/
-│   │   └── tashkent_houses.xlsx          # Raw data
-│   └── processed/
-│       └── tashkent_houses.csv           # Processed and cleaned data
-├── 🤖 models/                            # Model artifacts (not saved yet)
-└── 📓 notebooks/
-    ├── 01_data_info.ipynb                # EDA Jupyter notebook
-    ├── 02_data_Preprocessing.ipynb       # Data preprocessing Jupyter notebook
-    └── 03_data_training.ipynb            # Training pipeline Jupyter notebook
-```
-
----
-
-## 🛠 Technologies Used
-
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![Pandas](https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white)
-![NumPy](https://img.shields.io/badge/numpy-%23013243.svg?style=for-the-badge&logo=numpy&logoColor=white)
-![Matplotlib](https://img.shields.io/badge/Matplotlib-%23ffffff.svg?style=for-the-badge&logo=Matplotlib&logoColor=black)
-![Seaborn](https://img.shields.io/badge/Seaborn-blue?style=for-the-badge)
-![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+This project aims to build a robust **Machine Learning Pipeline** capable of predicting real estate prices in Tashkent, Uzbekistan, based on property features such as location, size, and number of rooms. By leveraging data analysis, geospatial feature engineering, and advanced regression models, the system helps estimate fair market values for different types of properties.
 
 ---
 
 ## 📊 Dataset Information
 
-| Parameter | Value |
-|----------|--------|
-| **Raw dataset** | 7421 rows, 9 columns |
-| **Processed dataset** | 7405 rows, 8 columns |
-| **Data types** | String, Integer, Float |
-| **Null values** | None |
-| **Location** | Tashkent city |
-| **House types** | All types (private houses, multi-story apartments) |
-| **Filtered** | Price ≤400,000, Size ≤350 sq.m |
+The data comes from real listings in the Tashkent housing market. 
+
+| **Metric** | **Value** |
+| :--- | :--- |
+| 🗃️ **Raw Rows** | 7,421 |
+| 🧹 **Processed Rows** | 7,405 (Filtered outliers) |
+| 📍 **Location** | Tashkent City, Uzbekistan |
+| 🎯 **Target Variable** | `price` (USD) |
+
+### 🔑 Core Features
+- `address`, `district` - Categorical location data.
+- `rooms` - Number of rooms.
+- `size` - Total area of the property (sq.m).
+- `level`, `max_levels` - Current floor and total floors in the building.
+- `lat`, `lng` - Geospatial coordinates (Latitude & Longitude).
 
 ---
 
-## 🔑 Main Variables
+## 🧠 Methodology & Pipeline
 
-| Variable | Description |
-|-------------|---------|
-| **district** | District where the house is located |
-| **rooms** | Number of rooms |
-| **size** | House area (sq. m) |
-| **level** | Floor where the house is located |
-| **max_levels** | Total number of floors |
-| **price** | House price (target variable) |
-| **lat** | Latitude coordinate |
-| **lng** | Longitude coordinate |
+The project development was divided into several focused stages inside Jupyter Notebooks:
+
+### 1️⃣ Exploratory Data Analysis (EDA)
+> *Found in `01_data_info.ipynb`*
+- **Statistical Summaries:** Extracted basic distributions (`mean`, `min`, `max`).
+- **Data Cleaning:** Validated null counts (no nulls found) and dropped the high-cardinality `address` column.
+- **Visualizations:**
+  - 📊 **Histograms** for numeric feature distributions.
+  - 🎨 **Geospatial Scatter Plots** mapping price density across Tashkent coordinates.
+  - 🔥 **Correlation Heatmaps** and **Pairplots** to identify features heavily influencing `price`.
+
+### 2️⃣ Data Preprocessing & Feature Engineering
+> *Found in `02_data_Preprocessing.ipynb`*
+- **Outlier Removal:** Filtered anomalies (`price` $\le$ 400,000 and `size` $\le$ 350 sq.m) to enhance model robustness.
+- **Stratified Split:** Executed an 80/20 train-test split, stratified by `district` to ensure proportional regional representation.
+- **Custom Transformers (Feature Engineering):** 
+  - 📏 `room_size`: Calculated as $\text{size} / \text{rooms}$.
+  - 🗺️ `distance_to_center`: Computed spatial distance from the exact center of Tashkent using the **Haversine formula**.
+- **Transformation Pipeline:**
+  - Standardized numeric features using `StandardScaler`.
+  - Encoded categorical features (`district`) using `OneHotEncoder`.
+  - Combined transformations elegantly using Scikit-Learn's `ColumnTransformer`.
+
+### 3️⃣ Modeling & Evaluation
+> *Found in `03_data_training.ipynb`*
+Three baseline algorithms were trained and cross-validated using a `Pipeline` integration:
+1. **Linear Regression**
+2. **Decision Tree Regressor**
+3. **Random Forest Regressor** 🌟 (Best Performer)
+
+Each model was strictly evaluated utilizing `Cross-Validation (CV)` and `Root Mean Squared Error (RMSE)`. The resulting models were serialized for deployment.
+
+---
+
+## 📁 Project Structure
+
+```text
+first-ml-training/
+├── 📄 README.md                          # You are here!
+├── 📊 data/
+│   ├── raw/
+│   │   └── tashkent_houses.xlsx          # Initial raw dataset
+│   └── processed/
+│       └── tashkent_houses.csv           # Cleaned dataset ready for modeling
+├── 🤖 models/                            
+│   ├── random_forest_model.jbl           # Serialized RF model (Joblib)
+│   ├── logistic_regression_model.jbl     # Serialized LR model (Joblib)
+│   └── decision_tree_model.pkl           # Serialized DT model (Pickle)
+└── 📓 notebooks/
+    ├── 01_data_info.ipynb                # Data Exploration & Visualization
+    ├── 02_data_Preprocessing.ipynb       # Feature Engineering & Pipelines
+    └── 03_data_training.ipynb            # Model Training & Cross Validation
+```
+
+---
+
+## 🏆 Results
+
+Upon evaluating the models on the hold-out test set, the **Random Forest Regressor** significantly outperformed the other baselines:
+
+- 🏅 **Best Model:** `Random Forest Regressor`
+- 🎯 **Test RMSE Score:** **`16,200.90`** (Outstanding baseline accuracy for real estate pricing)
+
+All trained artifacts have been successfully exported to the `models/` directory using `joblib` and `pickle` for future REST API integration.
 
 ---
 
 ## 🚀 Next Steps
 
-- [x] Train baseline models (Linear Regression, Decision Tree, Random Forest)
-- [x] Evaluate baseline models with RMSE
-- [x] Add cross-validation for baseline models
-- [ ] Analyze errors (MAE, R², residuals)
-- [ ] Tune Random Forest hyperparameters
-- [x] Save the trained models to the `models/` folder
-- [ ] Deploy the best model
+- [x] Full EDA and Outlier filtering.
+- [x] Geospatial feature engineering (Haversine distance).
+- [x] Train baseline regression models.
+- [x] Model evaluation with CV and RMSE.
+- [x] Export winning models to `.jbl` / `.pkl`.
+- [ ] 🔄 **Hyperparameter Tuning** (GridSearchCV / RandomizedSearchCV for Random Forest).
+- [ ] 📈 **Advanced Error Analysis** (Evaluate Residuals, R² Score, MAE).
+- [ ] 🌐 **Deployment** (Wrap the Random Forest pipeline in a FastAPI or Flask web service).
 
 ---
-
-## 📝 Note
-
-*Project development process: Data analysis → Feature engineering → Data preprocessing → Model training → Prediction*
-model
-
----
-
-## 📝 Note
-
-*Project development process: Data analysis → Feature engineering → Data preprocessing → Model training → Prediction*
+*Built with ❤️ utilizing Pandas, Scikit-Learn, and Seaborn.*
